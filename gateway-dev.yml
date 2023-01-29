@@ -6,28 +6,28 @@ spring:
    application:
        name: API-GATEWAY  
 
-   cloud:
-    gateway:
-      routes:
-      - id: USER-SERVICE
-        uri: lb://USER-SERVICE
-        predicates: Path=/users/**
+#   cloud:
+#    gateway:
+#      routes:
+#      - id: USER-SERVICE
+#        uri: lb://USER-SERVICE
+#        predicates: Path=/users/**
        
-        filters:
-        - name: CircuitBreaker
-          args:
-            name: USER-SERVICE
-            fallbackUri: forward:/userServiceFallbackMethod
+#        filters:
+#        - name: CircuitBreaker
+#          args:
+#            name: USER-SERVICE
+#            fallbackUri: forward:/userServiceFallbackMethod
          
-      - id: DEPARTMENT-SERVICE
-        uri: lb://DEPARTMENT-SERVICE
-        predicates: Path=/departments/**  
+#      - id: DEPARTMENT-SERVICE
+#        uri: lb://DEPARTMENT-SERVICE
+#        predicates: Path=/departments/**  
         
-        filters:
-        - name: CircuitBreaker
-          args:
-            name: DEPARTMENT-SERVICE
-            fallbackUri: forward:/departmentServiceFallbackMethod
+#        filters:
+#        - name: CircuitBreaker
+#          args:
+#            name: DEPARTMENT-SERVICE
+#            fallbackUri: forward:/departmentServiceFallbackMethod
             
 hystrix:
   command:
