@@ -44,7 +44,9 @@ management:
       include: "*"
       
 #secret key - should be encrypted
-jwt.secret=Wekc%gshskUT*afRB!gatG$hay%Jusnm==      
+jwt:
+  #header: Authorization
+  secret: Wekc%gshskUT*afRB!gatG$hay%Jusnm==     
             
 #eureka.client.register-with-eureka=true
 #eureka.client.fetch-registry=true
