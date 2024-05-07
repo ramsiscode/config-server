@@ -46,7 +46,7 @@ management:
 #secret key - should be encrypted
 jwt:
   header: Authorization
-  secret: testkey#secret@12334     
+  secret: testkey#secret@12334
             
 #eureka.client.register-with-eureka=true
 #eureka.client.fetch-registry=true
